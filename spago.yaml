@@ -1,7 +1,9 @@
 package:
-  name: my-purescript-template
-  description: Stuff I like to not copy paste whenever I start a new project. Not a real package.
+  name: massara-na-canvas
+  description: A purer, more ergonomic wrapper for the Canvas API
   dependencies:
+    - canvas: ">=6.0.0 <7.0.0"
+    - effect: ">=4.0.0 <5.0.0"
     - prelude: ">=6.0.2 <7.0.0"
   test:
     main: Test.Main
@@ -15,7 +17,7 @@ package:
     license: MIT
     location:
       githubOwner: UnrelatedString
-      githubRepo: my-purescript-template
+      githubRepo: purescript-massara-na-canvas
     owners:
       - keytype: ssh-rsa
         public: AAAAB3NzaC1yc2EAAAADAQABAAABAQCY1Gdnnq2tNSrBxKnxuLfSsl7sLjCU5Js9c3tW9/x12tA4g1grIOezpBAszHUr40XuzGMHwmd3i3iq45ORhNJeq8lbgp8I5Zc3Kv+nugSqPHWLVIfa3dwktBYpUaDIwurPZsiQwXL/QJLMwSFKLn4DK8ZctMv+8Uy123Z4rlLNfZ8obaP9odtpegNtcCJ7tHFyg0EsgFpYYZHWJd2fzB9m9YW0Hziyyc/bknOwiwCcjiLUKaSPIE/8UgiPJx1mvKopd65PbqZf093lhHl3TesWF5pqeS5esCOaBUkL6UHeQMiQGnlt/VHMvIQaXNa33RoR8luZtDmUolgXi221xrNX
