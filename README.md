@@ -9,7 +9,7 @@
 > まっさらなキャンバスの上  
 > 描き殴るように刻むんだ
 
-A purer, more ergonomic wrapper for the Canvas API. The aim is that all state which affects drawing operations is explicitly accounted for, and most drawing operations are represented as "not even monadic" but rather by a simple monoid that does not and cannot encode any kind of impure *computation* alongside the simple actions. Additionally, though modeled on it without excessively introducing extra power or abstractions--repackaging its existing concepts--much of the machinery is not tightly coupled to the actual Canvas API and can be mocked out or emulated without too much hassle (for example, with the Cairo-based `canvas` implementation on npm).
+A purer, more ergonomic wrapper for the Canvas API. The aim is that all state which affects drawing operations is explicitly accounted for. Additionally, though modeled on it without excessively introducing extra power or abstractions--repackaging its existing concepts--much of the machinery is not tightly coupled to the actual Canvas API and can be mocked out or emulated without too much hassle (for example, with the Cairo-based `canvas` implementation on npm).
 
 ## Coverage:
 
