@@ -11,17 +11,128 @@
 
 A purer, more ergonomic wrapper for the Canvas API. The aim is that all state which affects drawing operations is explicitly accounted for. Additionally, though modeled on it without excessively introducing extra power or abstractions--repackaging its existing concepts--much of the machinery is not tightly coupled to the actual Canvas API and can be mocked out or emulated without too much hassle (for example, with the Cairo-based `canvas` implementation on npm).
 
+The Canvas API bindings use types from the existing `canvas` package when possible, but otherwise are implemented with raw FFI calls. (Or maybe I shouldn't even do that...? It would still be, like, uncomfortably tight coupling.)
+
 ## Coverage:
 
 ### `HTMLCanvasElement`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:CanvasElement)
 
+- [ ] width
+- [ ] height
+- [ ] getContext
+- [ ] toDataURL
+- [ ] toBlob
+- [ ] transferControlToOffscreen
 
 ### `CanvasRenderingContext2D`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:Context2D)
 
+#### mixin interface `CanvasSettings`
+
+- [ ] getContextAttributes
+
+#### mixin interface `CanvasState`
+
+- [ ] save
+- [ ] restore
+- [ ] reset
+- [ ] isContextLost
+
+#### mixin interface `CanvasTransform`
+
+- [ ] scale
+- [ ] rotate
+- [ ] translate
+- [ ] transform
+- [ ] getTransform
+- [ ] setTransform
+- [ ] resetTransform
+
+#### mixin interface `CanvasCompositing`
+
+- [ ] globalAlpha
+- [ ] globalCompositeOperation
+
+#### mixin interface `CanvasImageSmoothing`
+
+- [ ] imageSmoothingEnabled
+- [ ] imageSmoothingQuality
+
+#### mixin interface `CanvasFillStrokeStyles`
+
+- [ ] strokeStyle
+  - [ ] DOMString
+  - [ ] CanvasGradient
+  - [ ] CanvasPattern
+- [ ] fillStyle
+  - [ ] DOMString
+  - [ ] CanvasGradient
+  - [ ] CanvasPattern
+- [ ] createLinearGradient
+- [ ] createRadialGradient
+- [ ] createConicGradient
+- [ ] createPattern
+
+#### mixin interface `CanvasShadowStyles`
+
+- [ ] shadowOffsetX
+- [ ] shadowOffsetY
+- [ ] shadowBlur
+- [ ] shadowColor
+
+#### mixin interface `CanvasFilters`
+
+- [ ] filter
+
+#### mixin interface `CanvasRect`
+
+- [ ] clearRect
+- [ ] fillRect
+- [ ] strokeRect
+
+#### mixin interface `CanvasDrawPath`
+
+- [ ] beginPath
+- [ ] fill
+- [ ] stroke
+- [ ] clip
+- [ ] isPointInPath
+- [ ] isPointInStroke
+
+#### mixin interface `CanvasUserInterface`
+
+- [ ] drawFocusIfNeeded
+
+#### mixin interface `CanvasText`
+
+- [ ] fillText
+- [ ] strokeText
+- [ ] measureText
+
+#### mixin interface `CanvasDrawImage`
+
+- [ ] drawImage
+  - [ ] dx, dy
+  - [ ] sx, sy
+
+#### mixin interface `CanvasImageData`
+
+- [ ] createImageData
+- [ ] getImageData
+- [ ] putImageData
+
+#### mixin interface `CanvasPathDrawingStyles`
+
+- [ ] lineWidth
+- [ ] lineCap
+- [ ] lineJoin
+- [ ] miterLimit
+
+#### mixin interface `CanvasTextDrawingStyles`
+#### mixin interface `CanvasPath`
 
 ### `CanvasGradient`
 
@@ -35,7 +146,9 @@ A purer, more ergonomic wrapper for the Canvas API. The aim is that all state wh
 
 ### `ImageBitmap`
 
-[MDN](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap#specifications) (not in `purescript-canvas`--FFI this? does it even matter)
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap#specifications) (not in `purescript-canvas`)
+
+(low priority)
 
 
 ### `ImageData`
@@ -50,7 +163,7 @@ A purer, more ergonomic wrapper for the Canvas API. The aim is that all state wh
 
 ### `OffscreenCanvas`
 
-[MDN](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas#specifications) (not in `purescript-canvas`, but this is actually like really useful so I'm actually going to PR it in)
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas#specifications) (not in `purescript-canvas`, yet)
 
 
 
