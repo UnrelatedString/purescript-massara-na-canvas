@@ -132,17 +132,43 @@ The Canvas API bindings use types from the existing `canvas` package when possib
 - [ ] miterLimit
 
 #### mixin interface `CanvasTextDrawingStyles`
+
+- [ ] lang
+- [ ] font
+- [ ] textAlign
+- [ ] textBaseline
+- [ ] direction
+- [ ] letterSpacing
+- [ ] fontKerning
+- [ ] fontStretch
+- [ ] fontVariantCaps
+- [ ] textRendering
+- [ ] wordSpacing
+
 #### mixin interface `CanvasPath`
+
+- [ ] closePath
+- [ ] moveTo
+- [ ] lineTo
+- [ ] quadraticCurveTo
+- [ ] bezierCurveTo
+- [ ] arcTo
+- [ ] rect
+- [ ] roundRect
+- [ ] arc
+- [ ] ellipse
 
 ### `CanvasGradient`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:CanvasGradient)
 
+- [ ] addColorStop
 
 ### `CanvasPattern`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:CanvasPattern)
 
+- [ ] setTransform
 
 ### `ImageBitmap`
 
@@ -155,17 +181,38 @@ The Canvas API bindings use types from the existing `canvas` package when possib
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/ImageData#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:ImageData)
 
+- [ ] constructor
+- [ ] width
+- [ ] height
+- [ ] data
+- [ ] colorSpace
 
 ### `TextMetrics`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics#specifications) [Pursuit](https://pursuit.purescript.org/packages/purescript-canvas/6.0.0/docs/Graphics.Canvas#t:TextMetrics)
 
+- [ ] width
+- [ ] actualBoundingBoxLeft
+- [ ] actualBoundingBoxRight
+- [ ] fontBoundingBoxAscent
+- [ ] fontBoundingBoxDescent
+- [ ] actualBoundingBoxAscent
+- [ ] actualBoundingBoxDescent
+- [ ] emHeightAscent
+- [ ] emHeightDescent
+- [ ] hangingBaseline
+- [ ] alphabeticBaseline
+- [ ] ideographicBaseline
 
 ### `OffscreenCanvas`
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas#specifications) (not in `purescript-canvas`, yet)
 
-
+- [ ] constructor
+- [ ] width
+- [ ] height
+- [ ] transferToImageBitmap
+- [ ] convertToBlob
 
 
 
